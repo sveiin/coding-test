@@ -11,20 +11,13 @@ public class Main {
             
         if(num1 == num2 && num2 == num3) {
             money = 10000 + num1 * 1000;
-        } else if (num1 == num2 || num2 == num3 || num3 == num1) {
-            if(num1 == num2) {
-                money =  1000 + num1 * 100;
-            } else {
-                money = 1000 + num3 * 100;
-            }
+        } else if(num1 == num2) {
+            money = 1000 + num1 * 100;
+        } else if(num1 == num3 || num2 == num3) {
+            money = 1000 + num3 * 100;
         } else {
-            if(num1 > num2 && num1 > num3) {
-                money = num1 * 100;
-            } else if (num2 > num3) {
-                money = num2 * 100;
-            } else {
-                money = num3 * 100;
-            }
+            int max = Math.max(num1, Math.max(num2, num3));
+            money = max * 100;
         }
         
         System.out.println(money);
