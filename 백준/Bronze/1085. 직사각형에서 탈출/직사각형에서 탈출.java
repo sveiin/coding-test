@@ -9,20 +9,11 @@ public class Main {
         int w = sc.nextInt();
         int h = sc.nextInt();
         
-        int min = x;
+        int minX = Math.min(x, w - x);
+        int minY = Math.min(y, h - y);
         
-        if(min > w - x) {
-            min = w - x;
-        }
+        int result = Math.min(minX, minY);
         
-        if(min > y) {
-            min = y;
-        }
-        
-        if(min > h - y) {
-            min = h - y;
-        }
-        
-        System.out.println(min);
+        System.out.println(result);
     }
 }
