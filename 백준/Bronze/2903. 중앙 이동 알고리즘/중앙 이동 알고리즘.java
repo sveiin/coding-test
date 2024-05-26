@@ -6,14 +6,8 @@ public class Main {
         
         int N = sc.nextInt();
         
-        int num = 2;
-        int count = 1;
-        for(int i = 1; i <= N; i++) {
-            num += count;
-            count *= 2;
-        }
-        
-        int result = num * num;
+        int dot = (int) Math.pow(2, N) + 1;
+        int result = (int) Math.pow(dot, 2);
         
         System.out.println(result);
     }
